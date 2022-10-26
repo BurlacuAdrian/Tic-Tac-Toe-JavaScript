@@ -27,3 +27,31 @@ body{
     cursor:pointer;
     background-color: rgba(255, 255, 255, 0.9);
 }
+
+.popUp{
+    position: absolute;
+    border:2px solid white;
+    width: 20%;
+    height: 20%;
+    left:50%;
+    transform: translate(-50%,0);
+    background-color: rgba(245, 245, 245,0.92);
+    border-radius: 10px;
+    z-index:1;
+    font-size: 4rem;
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+}
+
+.message{
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    visibility: visible;
+    cursor: pointer;
+}
