@@ -9,7 +9,17 @@
     
 </head>
 <body>
-    <div id="popUp" class="popUp" onclick="reset()"></div>
+    <!-- <div id="popUp" class="popUp" onclick="reset()"></div> -->
+    <div id="popUp" class="popUp"></div>
+    <div id="leftBar">
+        <h1>X (You)</1>
+        <h1>Score:</h1>
+        <h1 id="xCount">0</h1>
+        <h1>-</h1>
+        <h1 id="oCount">0</h1>
+        <h1>O (A.I.)</h1>
+    </div>
+    
     <div id="central">
         <div id="s0" class="square" onclick="player('s0')"></div>
         <div id="s1" class="square" onclick="player('s1')"></div>
@@ -21,6 +31,15 @@
         <div id="s7" class="square" onclick="player('s7')"></div>
         <div id="s8" class="square" onclick="player('s8')"></div>
     </div>
+
+    
+
+    <div id="rightBar">
+        <h1 onclick="clearGame()">Reset<br>game</1>
+        <h1><a href="https://burlacuadrian.github.io/Personal-Website/" target="_blank">Back to <br>main site</a></h1>
+        <h1><a href="https://github.com/BurlacuAdrian" target="_blank">GitHub</a>
+        </h1></div>
+
     <script src="script.js"></script>
 </body>
 </html>

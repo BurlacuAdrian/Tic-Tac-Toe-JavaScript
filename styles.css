@@ -1,8 +1,12 @@
+@media only screen and (min-device-width: 479px) {
 body{
     background-image : linear-gradient(to right,#7c3474,#8d57e3, #683cec);
+    display: flex;
+    margin:0;
 }
 
 #central{
+    margin-left:20%;
     display:grid;
     justify-content: center;
     align-content: center;
@@ -34,19 +38,22 @@ body{
     width: 20%;
     height: 20%;
     left:50%;
+    top:-25vh;
     transform: translate(-50%,0);
+    /* top:-100vh; */
     background-color: rgba(245, 245, 245,0.92);
     border-radius: 10px;
     z-index:1;
     font-size: 4rem;
-    
+    text-align: center;
     display:flex;
     align-items: center;
     justify-content: center;
-    visibility: hidden;
+    visibility: visible;
     transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
     
 }
+
 
 .message{
     top:50%;
@@ -54,4 +61,168 @@ body{
     transform: translate(-50%,-50%);
     visibility: visible;
     cursor: pointer;
+}
+
+#leftBar{
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 0 50px 50px 0;
+    height:60vh;
+    width:8vw;
+    position:sticky;
+    left:0;
+    top:10vw;
+    overflow-y: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#rightBar{
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50px 0 0 50px;
+    height:60vh;
+    width:8vw;
+    position:sticky;
+    margin: auto;
+    margin-right: 0;
+    top:10vw;
+    overflow-y: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#rightBar h1:hover{
+    transform: translate(0,-3px);
+    cursor:pointer;
+    color:rgb(147, 94, 94);
+    text-decoration: none;
+}
+
+
+}
+
+
+
+
+
+@media only screen and (max-width: 479px){
+    body{
+        background-image : linear-gradient(#7c3474,#8d57e3, #683cec);
+        margin:0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    /* now top bar */
+    #leftBar{
+        /* border:3px solid green; */
+        background-color: rgba(255, 255, 255, 0.85);
+        display: flex;
+        flex-direction: row;
+        width:80vw;
+        height: 10vh;
+        margin: auto;
+        border-radius: 0 0 50px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: sticky;
+
+    }
+    #leftBar h1{
+
+        font-size: 1rem;
+    }
+
+    #rightBar{
+        /* border:3px solid green; */
+        background-color: rgba(255, 255, 255, 0.85);
+        display: flex;
+        flex-direction: row;
+        width:80vw;
+        height: 10vh;
+        margin: auto;
+        margin-top: 14vh;
+        /* bottom:0; */
+        border-radius: 50px 50px 0 0 ;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: sticky;
+
+    }
+    #rightBar h1{
+
+        font-size: 1rem;
+    }
+
+    /* border:3px solid green; */
+    #central{
+        /* border:3px solid green; */
+        width: 96vw;
+        height: 56vh;
+        margin-top:10vh;
+        margin-left:2vw;
+        margin-right:2vw;
+        margin-bottom: 3vh;
+        display:grid;
+        justify-content: space-around;
+        align-content: space-around;
+        /* min-height: 90vh; */
+        grid-template-columns: repeat(3,31vw);
+        grid-template-rows:  repeat(3, 18vh);
+        transform: translate(0,5%);
+    }
+
+    .square{
+
+        margin: 3px solid red;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 10rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .square:hover{
+        transform: translate(0,-3px);
+        cursor:pointer;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .popUp{
+        position: absolute;
+        border:2px solid white;
+        width: 60%;
+        height: 20%;
+        left:50%;
+        top:-25vh;
+        transform: translate(-50%,0);
+        /* top:-100vh; */
+        background-color: rgba(245, 245, 245,0.92);
+        border-radius: 10px;
+        z-index:1;
+        font-size: 4rem;
+        text-align: center;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        visibility: visible;
+        transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        
+    }
+    
+    
+    .message{
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        visibility: visible;
+        cursor: pointer;
+    }
+    
 }
